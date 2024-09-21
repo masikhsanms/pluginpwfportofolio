@@ -1,0 +1,351 @@
+.lima-table {
+    font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+}
+  
+.lima-table td, .lima-table th {
+    border: 1px solid #ddd;
+    padding: 8px;
+}
+  
+.lima-table tr:nth-child(even){background-color: #f2f2f2;}
+  
+.lima-table tr:hover {background-color: #ddd;}
+  
+.lima-table th {
+    padding-top: 12px;
+    padding-bottom: 12px;
+    text-align: left;
+    background-color: #4CAF50;
+    color: white;
+}
+
+.tb-pwf {
+    margin: 0;
+    position: relative;
+}
+.tb-pwf .item-pwf {
+    list-style: none;
+    display: inline-block;
+    margin-left: 10px;
+    white-space: nowrap;
+}
+.tb-pwf .item-pwf:first-child {
+    margin-left: 0;
+}
+.tb-pwf .item-pwf:last-child {
+    margin-right: 0;
+}
+.item-pwf.active a {
+    color: white;
+}
+.item-pwf.active {
+    background: #8c47f2;
+    padding: 5px 15px;
+    border-radius: 10px;
+    border: 1px solid #8c47f2;
+}
+li.item-pwf {
+    padding: 5px 15px;
+    border-radius: 10px;
+    border: 1px solid #8c8c8c;
+}
+
+li.item-pwf:not(active) a {
+    color: #8c8c8c;
+}
+.link-pwf {
+    font-weight: bold;
+}
+.link-pwf .pwf-count {
+    margin-right: 10px;
+    font-weight: normal;
+}
+.item-content-pwf .read-more {
+    display: none;
+}
+.item-content-pwf .judul-pwf {
+    margin-bottom: 0px;
+    font-weight: bold;
+    font-size: 14px;
+    padding-top: 5px;
+}
+.card-pwf-content {
+    margin: 0;
+    position: relative;
+    display: grid;
+    grid-gap: 25px 25px;
+    grid-template-columns: auto auto 316.63px;
+    margin-top: 30px;
+    margin-bottom: 30px;
+
+}
+.item-content-pwf p {
+    font-size: 12px;
+    margin-bottom: 0;
+    line-height: 1.5;
+}
+.download-icon i {
+    position: absolute;
+    top: 30px;
+    left: 10px;
+    font-size: 30px;
+    color: #8c47f2;
+}
+.download-icon {
+    display: inline-block;
+    position: relative;
+    /* vertical-align: top;*/
+    vertical-align: bottom;
+    padding: 12px;
+}
+.text-desc-pwf {
+    display: inline-block;
+    width: 80%;
+}
+.card-pwf-content .item-content-pwf {
+    list-style: none;
+    border-radius: 10px;
+    background-color: white;
+    padding: 15px;
+    /* box-shadow: 0px 0px 4px 2px #ccc; */
+    border: 1px solid #E4E9F5;
+}
+.card-pwf-content .item-content-pwf img {
+    height: 200px;
+    width: 100%;
+    max-height: 200px;
+}
+
+#page-pwf-porto {
+    text-align: center;
+}
+
+#page-pwf-porto .page-numbers {
+    font-size: 18px;
+    font-weight: bold;
+    color: #909090;
+    margin-left: 5px;
+    margin-right: 5px;
+    min-width: 35px;
+    min-height: 35px;
+    height: auto;
+    display: inline-block;
+    text-align: center;
+    border-radius: 50%;
+}
+
+#page-pwf-porto .page-numbers.current {
+    background: #8c47f2;
+    color: white;
+}
+
+/* animate loading */
+.modal-pwf-loading {
+    display:    none;
+    position:   fixed;
+    z-index:    1000;
+    top:        0;
+    left:       0;
+    height:     100%;
+    width:      100%;
+    background: rgba( 255, 255, 255, .8 ) 
+                url('../img/ajax-loader.gif') 
+                50% 50% 
+                no-repeat;
+}
+
+/* When the body has the loading class, we turn
+   the scrollbar off with overflow:hidden */
+.rows-lima.loading .modal-pwf-loading {
+    overflow: hidden;   
+}
+
+/* Anytime the body has the loading class, our
+   modal element will be visible */
+.rows-lima.loading .modal-pwf-loading {
+    display: block;
+}
+
+/* MODAL LIMA */
+/* The Modal (background) */
+.modal-pwf {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    padding-top: 100px; /* Location of the box */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+  }
+  
+  /* Modal Content */
+  .modal-content-pwf {
+    position: relative;
+    background-color: #fefefe;
+    margin: auto;
+    padding: 15px;
+    border: 1px solid #888;
+    width: 50%;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+    -webkit-animation-name: animatetop;
+    -webkit-animation-duration: 0.4s;
+    animation-name: animatetop;
+    animation-duration: 0.4s;
+    border-radius: 10px;
+  }
+  
+  /* The Close Button */
+  #pwfModal .close {
+    color: #aaaaaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+  }
+  
+  #pwfModal .close:hover,
+  #pwfModal .close:focus {
+    color: #000;
+    text-decoration: none;
+    cursor: pointer;
+  }
+  
+  @-webkit-keyframes animatetop {
+    from {top:-300px; opacity:0} 
+    to {top:0; opacity:1}
+  }
+  
+  @keyframes animatetop {
+    from {top:-300px; opacity:0}
+    to {top:0; opacity:1}
+  }
+
+
+  .content-modal-detail img {
+    width: 100%;
+    height: auto;
+    /* max-height: 350px; */
+    overflow: hidden;
+}
+
+.content-modal-detail .read-more {
+    display: none;
+}
+
+.content-modal-detail p {
+    margin-bottom: 0;
+}
+
+.content-modal-detail .judul-pwf {
+    padding-top: 20px;
+    font-weight: bold;
+    line-height: 1.5;
+}
+
+.modal-content-pwf p {
+    margin-bottom: 0;
+}
+#pwfModal .close i {
+    position: absolute;
+    top: -30px;
+    color: white;
+}
+.content-modal-detail .download-icon i {
+    position: absolute;
+    top: 20px;
+    left: 50px;
+    font-size: 50px;
+    color: #8c47f2;
+}
+#pwfModal .min i {
+    position: absolute;
+    top: -30px;
+    color: white;
+    right: 25px;
+    cursor: pointer;
+}
+#pwfModal .plus i {
+    position: absolute;
+    top: -30px;
+    right: 52px;
+    color: white;
+    cursor: pointer;
+}
+
+@media only screen and (max-width: 768px) {
+    .card-pwf-content {
+        display: block !important;
+    }
+    .card-pwf-content .item-content-pwf{
+        margin-bottom: 30px !important;
+    }
+    .modal-content-pwf {
+        width: 80% !important;
+    }
+    .content-modal-detail img {
+        width: 100%;
+        height: auto !important;
+        /* max-height: auto !important; */
+        overflow: hidden;
+    }
+    .content-modal-detail .download-icon i {
+        position: absolute;
+        top: 38px !important;
+        left: 5px !important;
+        font-size: 50px;
+        color: #8c47f2;
+    }
+    .card-pwf-content .item-content-pwf img {
+        height: 200px!important ;
+        width: 100%;
+        max-height: 200px !important;
+        overflow: hidden;
+    }
+    body .content-modal-detail .text-desc-pwf p{
+        font-size: unset !important;
+    }
+    .content-modal-detail .download-icon .img-download {
+        position: absolute;
+        top: -35px;
+        left: 0;
+    }
+    .content-modal-detail .download-icon {
+        width: 18%;
+        padding: 0;
+        text-align: center;
+        vertical-align: baseline;
+        padding-bottom: 0px;
+        position: relative;
+    }
+}
+
+.tb-pwf {
+    max-width: 2000px !important;
+}
+
+.tab-content-pwf {
+    overflow: auto;
+}
+.card-pwf-content img.img-download {
+    height: auto !important;
+}
+.content-modal-detail .download-icon {
+    /* vertical-align: middle; */
+    width: 10%;
+    padding: 0;
+    text-align: center;
+}
+.content-modal-detail .download-icon .img-download {
+    width: 50px;
+}
+.content-modal-detail .text-desc-pwf p {
+    font-size: 16px !important;
+}
+.content-modal-detail .text-desc-pwf {
+    width: 88%;
+}
